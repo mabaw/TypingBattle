@@ -1,0 +1,73 @@
+    a:link {text-decoration:none; color:#2B45ED;}
+	a:visited {text-decoration:none;color:#2B45ED;}
+	a:hover {text-decoration:none;color:#2B45ED;}
+	a:active {text-decoration:none;color:#2B45ED;}
+  
+
+body {
+	font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+	font-size: 10pt;
+}
+
+h2 {
+	color: #147e7e;	
+}
+
+h3 {
+	color: #008080;	
+}
+
+table{
+	border-collapse:collapse;
+	font-family:verdana;
+}
+
+th{
+	border:1px solid silver;
+	font-size:10pt;
+	background: #5D97FF;
+	color: white;
+}
+
+td{
+	
+	font-size:10pt;
+	color: #5D97FF;
+	text-align: center;
+}
+
+td, th{
+	padding:0.3em 0.7em;
+}
+
+.main {
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+.error {
+	color: red;
+}
+
+.menubar{	
+	text-align: center;
+	color: navy;
+	background-color: #BCC6CC;
+}
+
+
+.menubar-select{	
+	text-align: center;
+	color: white;
+	background-color: #56A5EC;
+}
+
+.head{
+	text-align: center;
+}
+
+.selecttable {
+	border: solid 1pt #2B60DE;
+	text-align: center;
+}

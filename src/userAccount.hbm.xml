@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="jp.co.fitec.traning.project.typing.entity.UserAccount" table="mst_user_account">
+        <id name="name" />
+        <many-to-one name="location" column="location_code" lazy="false" />
+        <property name="password" />
+        <property name="photo"  />
+    </class>
+</hibernate-mapping>

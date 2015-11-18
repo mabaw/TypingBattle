@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://127.0.0.1/typing_game</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">36710</property>
+
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property>
+		
+		
+        <!-- Enable Hibernate's automatic session context management per thread -->
+        <!-- If you get a Session object, use getCurrentSession() method -->
+        <property name="current_session_context_class">thread</property> 
+		
+		<mapping resource="question.hbm.xml" />
+		<mapping resource="location.hbm.xml" />
+		<mapping resource="result.hbm.xml" />
+		<mapping resource="userAccount.hbm.xml" />
+		
+	</session-factory>
+
+</hibernate-configuration>

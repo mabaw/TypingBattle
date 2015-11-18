@@ -1,0 +1,15 @@
+body {
+	font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+	font-size: 20pt;
+}
+
+input {
+	height: 40px;
+	width: 50em;
+	font-size: 20pt;
+}
+
+h2 {
+	color: red;
+	font-size: 40pt;
+}

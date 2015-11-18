@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="jp.co.fitec.traning.project.typing.entity.hibernate.HibernateResult" table="trn_result">
+    <composite-id>
+   		 <key-many-to-one name="player" column="player_name" />
+		<key-property name="playDate" column="play_date" />       
+	</composite-id>     	
+        <property name="score" />       
+        <property name="correctType" column="correct_type" />
+        <property name="incorrectType" column="incorrect_type"/>
+        <property name="mode" column="mode" />
+        <property name="level" column="level" />
+        
+        
+        
+    </class>
+    
+     <query name="loadWorldWideRanking">
+   		<![CDATA[from HibernateResult as result 
+   					where mode like :mode 
+   						and level like :level
+   					order by result.score desc]]>
+    </query>
+    
+     <query name="loadOneWeekResult">
+   		<![CDATA[from HibernateResult as result   
+   		 where result.player.name like :name	   		
+   		 order by result.playDate desc]]>
+    </query>
+    
+    <query name="getUserTopScoreFromMode">
+   		<![CDATA[from HibernateResult as result   
+   		 where result.player.name like :name	
+   		 AND result.mode=:mode
+   		 order by result.playDate desc]]>
+    </query>
+   <!-- 
+    		 AND result.playDate > SUBTIME(now(),'7 0:0:0.000000')	
+    -->  
+</hibernate-mapping>
